@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login - EFFITRACK</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    background: #0f172a;
+    color: white;
+}
+
+.navigation a {
+    color: white;
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.cta-button {
+    background: linear-gradient(45deg, #38bdf8, #6366f1);
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: white;
+}
+
+/* LOGIN WRAPPER */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+}
+
+/* LOGIN BOX */
+.form-box {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    width: 380px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* INPUTS */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #38bdf8, #6366f1);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* FOOT TEXT */
+.bottom-text {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.bottom-text a {
+    color: #6366f1;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <h2>EFFITRACK</h2>
+
+    <nav class="navigation">
+        <a href="Home.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="contact.php">Contact</a>
+        <a href="login.html" class="cta-button">Login</a>
+    </nav>
+</header>
+
+<!-- LOGIN FORM -->
+<div class="wrapper">
+
+    <div class="form-box">
+
+        <h2>Login</h2>
+
+        <form action="login.php" method="post">
+
+            <input type="email" name="email" placeholder="Email Address" required>
+
+            <input type="password" name="password" placeholder="Password" required>
+
+            <select name="role" required>
+                <option value="" disabled selected>Select Role</option>
+                <option value="admin">Admin</option>
+                <option value="instructor">Instructor</option>
+                <option value="office_staff">Office Staff</option>
+                <option value="attendance">Attendance</option>
+            </select>
+
+            <button type="submit">Login</button>
+
+        </form>
+
+        <div class="bottom-text">
+            Don't have an account? <a href="register.html">Register</a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

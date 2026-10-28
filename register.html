@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 50px;
+            color: white;
+        }
+
+        .navigation a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .navigation a:hover {
+            text-decoration: underline;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+        }
+
+        .form-box {
+            width: 380px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            color: white;
+        }
+
+        .form-box h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-box {
+            position: relative;
+            margin: 20px 0;
+        }
+
+        .input-box input,
+        .input-box select {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+
+        .input-box label {
+            position: absolute;
+            top: -18px;
+            left: 5px;
+            font-size: 12px;
+            color: #ddd;
+        }
+
+        select option {
+            color: black;
+        }
+
+        .remember-forgot {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background: #00c6ff;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #0072ff;
+        }
+
+        .login-register {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .login-register a {
+            color: #00c6ff;
+            text-decoration: none;
+        }
+
+        .login-register a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>Logo</h2>
+    <nav class="navigation">
+        <a href="Home.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="contact.php">Contact</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
+
+<div class="wrapper">
+    <div class="form-box">
+        <h2>Create Account</h2>
+
+        <form action="register.php" method="post">
+
+            <div class="input-box">
+                <label>Name</label>
+                <input type="text" name="name" required>
+            </div>
+
+            <div class="input-box">
+                <label>Email</label>
+                <input type="email" name="email" required>
+            </div>
+
+            <div class="input-box">
+                <label>Password</label>
+                <input type="password" name="password" required>
+            </div>
+
+            <div class="input-box">
+                <label>Role</label>
+                <select name="role" required>
+                    <option value="">Select Role</option>
+                    <option value="admin">Admin</option>
+                    <option value="instructor">Instructor</option>
+                    <option value="office_staff">Office Staff</option>
+                    <option value="attendance">Attendance</option>
+                </select>
+            </div>
+
+            <div class="remember-forgot">
+                <label><input type="checkbox" required> I agree to terms</label>
+            </div>
+
+            <button type="submit" class="btn">Register</button>
+
+            <div class="login-register">
+                Already have an account? <a href="login.html">Login</a>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

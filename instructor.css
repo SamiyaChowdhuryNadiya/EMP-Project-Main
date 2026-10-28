@@ -1,0 +1,207 @@
+body{
+    background: #f0f0f0;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 25px 100px;
+    background: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 1.2em;
+    color: #fff;
+    user-select: none;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.table-container {
+    position: relative;
+    top: 110px; /* Adjust as needed */
+}
+
+.table {
+    padding: 20px;
+    border-radius: 10px;
+    background: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-top: 100px; /* Adjust as needed */
+}
+
+table tr td{
+    vertical-align: middle;
+    text-align: center;
+
+}
+
+td button{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background: #0d6efd;
+    color: #f0f0f0;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+td button i{
+    font-size: 20px;
+
+}
+
+
+.modal-header{
+    background: #0d6efd;
+    color: #f0f0f0;
+    border-radius: 10px 10px 0 0;
+    
+}
+
+.modal-body form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+
+}
+
+.modal-body form .imgholder{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+}
+
+.imgholder .upload{
+    position: absolute;
+    bottom: 0;
+    left: 10;
+    width: 100%;
+    height: 100px;
+    background: rgba(0,0,0,0.3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.upload i{
+    color: #f0f0f0;
+    font-size: 35px;
+
+}
+
+.imgholder:hover .upload{
+    display: flex;
+
+}
+
+.imgholder .upload input{
+    display: none;
+
+}
+
+.modal-body form .inputField{
+    flex-basis: 68%;
+    border-left: 5px groove blue;
+    padding-left: 20px;
+    margin-left: 20px;
+
+}
+
+form .inputField > div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+form .inputField > div label{
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+#userForm form .inputField > div label::after{
+    content: "*";
+    color: red;
+
+}
+
+form .inputField > div input{
+    width: 75%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 2px solid blue;
+
+}
+
+.modal-footer .submit{
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background: #0d6efd;
+    color: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+
+#readData form .inputField > div input{
+    color: #000;
+    font-size: 18px;
+
+}

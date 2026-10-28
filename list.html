@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar</title>
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="list.css"/> <!-- Added list.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/> <!-- Added Font Awesome -->
+</head>
+
+<body>
+    <header>
+        <h2 class="logo">Logo</h2>
+        <nav class="navigation">
+            <a href="Home.html">Home</a>
+            <a href="list.html">Instructor</a> <!-- Changed href to # for now -->
+            <a href="officestaff_list.php">Office Staff</a>
+            <a href="#">Attendant</a>
+            <a href="About.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div class="wrapper">
+    <section class="instructor">
+        <div class="instructor-list">
+            <h1>Instructor List</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Name</td> <!-- Changed 'name' to 'Name' -->
+                        <td>Department</td>
+                        <td>Date</td>
+                        <td>Join Time</td>
+                        <td>Logout Time</td>
+                        <td>Details</td>                                  
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01</td> 
+                        <td>Sumaiya Chowdhury</td> 
+                        <td>Design</td>
+                        <td>02-03-24</td>
+                        <td>8:00AM</td>
+                        <td>3:00PM</td> 
+                        <td><a href="profile.html"><button>View</button></a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>02</td> 
+                        <td>Tinny Biswas</td> 
+                        <td>Testing</td>
+                        <td>02-03-24</td>
+                        <td>9:00AM</td>
+                        <td>4:00PM</td> 
+                        <td><button>View</button></td>
+                       </tr>
+                       <tr>
+                        <td>03</td> 
+                        <td>Sourave Das</td> 
+                        <td>Coding</td>
+                        <td>02-03-24</td>
+                        <td>8:00AM</td>
+                        <td>3:00PM</td> 
+                        <td><button>View</button></td>
+                       </tr>
+                </tbody>
+            </table>
+        </div>
+     </section>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="list.js"></script>
+</body>
+
+</html>

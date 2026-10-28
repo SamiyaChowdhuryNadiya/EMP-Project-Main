@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About - EFFITRACK</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+}
+
+/* WRAPPER */
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* BACKGROUND EFFECT */
+.background-color .bg-1,
+.background-color .bg-2 {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: -1;
+}
+
+.bg-1 {
+    background: #6366f1;
+    top: 10%;
+    left: 15%;
+}
+
+.bg-2 {
+    background: #38bdf8;
+    bottom: 10%;
+    right: 15%;
+}
+
+/* MAIN CARD */
+.about-container {
+    display: flex;
+    gap: 50px;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    max-width: 1000px;
+    align-items: center;
+}
+
+/* IMAGE */
+.image-container img {
+    width: 320px;
+    border-radius: 15px;
+}
+
+/* TEXT */
+.text-container {
+    max-width: 500px;
+}
+
+.text-container h1 {
+    font-size: 34px;
+    color: #0f172a;
+    margin-bottom: 15px;
+}
+
+.text-container p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* HIDDEN TEXT */
+#moreText {
+    display: none;
+    margin-top: 15px;
+}
+
+/* BUTTON */
+.myButton {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 22px;
+    background: linear-gradient(45deg, #38bdf8, #6366f1);
+    color: white;
+    border-radius: 30px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.myButton:hover {
+    transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-container img {
+        width: 250px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- BACKGROUND -->
+    <div class="background-color">
+        <div class="bg-1"></div>
+        <div class="bg-2"></div>
+    </div>
+
+    <!-- ABOUT BOX -->
+    <div class="about-container">
+
+        <!-- IMAGE -->
+        <div class="image-container">
+            <img src="C:\xampp\htdocs\EPM-project-main\gen-z-student-studying-tablet-260nw-2741414793.webp" alt="About Image">
+        </div>
+
+        <!-- TEXT -->
+        <div class="text-container">
+            <h1>About Us</h1>
+
+            <p>
+                Our University Productivity Management System is designed to streamline workflows,
+                enhance collaboration, and improve efficiency.
+            </p>
+
+            <!-- EXTRA TEXT -->
+            <p id="moreText">
+                It includes task management, employee tracking, performance analytics, and real-time reporting.
+                The system is fully scalable, customizable, and designed for modern organizations.
+            </p>
+
+            <!-- BUTTON -->
+            <button class="myButton" onclick="toggleReadMore()">Read More</button>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+function toggleReadMore() {
+    var moreText = document.getElementById("moreText");
+    var btn = document.querySelector(".myButton");
+
+    if (moreText.style.display === "none" || moreText.style.display === "") {
+        moreText.style.display = "block";
+        btn.innerText = "Show Less";
+    } else {
+        moreText.style.display = "none";
+        btn.innerText = "Read More";
+    }
+}
+</script>
+
+</body>
+</html>

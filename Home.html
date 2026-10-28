@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EFFITRACK - Employee Productivity System</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    background: #0f172a;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo-name {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* NAVIGATION */
+.navigation a {
+    position: relative;
+    margin: 0 12px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+/* underline animation */
+.navigation a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: #38bdf8;
+    transition: 0.3s;
+}
+
+.navigation a:hover::after {
+    width: 100%;
+}
+
+.navigation a:hover {
+    color: #38bdf8;
+}
+
+/* active page */
+.navigation a.active {
+    color: #38bdf8;
+}
+
+.navigation a.active::after {
+    width: 100%;
+}
+
+/* BUTTON */
+.cta-button {
+    background: linear-gradient(45deg, #38bdf8, #6366f1);
+    padding: 10px 18px;
+    border-radius: 25px;
+    color: white !important;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: linear-gradient(to right, #0f172a, #1e293b);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.hero .cta-button {
+    margin-top: 25px;
+    display: inline-block;
+}
+
+/* FEATURES */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 80px 20px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: white;
+    padding: 25px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-8px);
+}
+
+.feature img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+.feature h2 {
+    margin-bottom: 10px;
+}
+
+/* CTA */
+.cta-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: #6366f1;
+    color: white;
+}
+
+.cta-section h2 {
+    font-size: 30px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0f172a;
+    color: white;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Logo">
+        <h2 class="logo-name">EFFITRACK</h2>
+    </div>
+
+    <nav class="navigation">
+        <a href="Home.html" class="active">Home</a>
+        <a href="About.html">About</a>
+        <a href="contact.php">Contact</a>
+        <a href="Login.html" class="cta-button">Login</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>University Productivity Management System</h1>
+    <p>
+        Empower your organization with smart task tracking, team collaboration,
+        and performance analytics — all in one powerful platform.
+    </p>
+    <a href="register.html" class="cta-button">Get Started</a>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+
+    <div class="feature">
+        <img src="task.png" alt="Task Management">
+        <h2>Task Management</h2>
+        <p>Organize, assign, and track tasks efficiently with real-time updates.</p>
+    </div>
+
+    <div class="feature">
+        <img src="team.png" alt="Collaboration">
+        <h2>Team Collaboration</h2>
+        <p>Communicate and collaborate seamlessly within your team workspace.</p>
+    </div>
+
+    <div class="feature">
+        <img src="analytics.png" alt="Analytics">
+        <h2>Smart Analytics</h2>
+        <p>Monitor employee performance with intelligent productivity insights.</p>
+    </div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <h2>Ready to boost your productivity?</h2>
+    <p>Join EFFITRACK today and transform your workflow.</p>
+    <br><br>
+    <a href="register.html" class="cta-button">Sign Up Now</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2026 EFFITRACK. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
